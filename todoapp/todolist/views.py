@@ -3,10 +3,10 @@ from .models import TodoList, Category
 
 # Create your views here.
 
-def index(request): #the index view
-    todos = TodoList.objects.all() #quering all todos with the object manager
-    categories = Category.objects.all() #getting all categories with object manager
-    if request.method == "POST": #checking if the request method is a POST
+def index(request):
+    todos = TodoList.objects.all()
+    categories = Category.objects.all()
+    if request.method == "POST":
         if "taskAdd" in request.POST: #checking if there is a request to add atodo
             title = request.POST["description"] #title
             date = str(request.POST["date"]) #date
