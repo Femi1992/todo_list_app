@@ -154,6 +154,10 @@ button {
     left: 10px;
     font-size: 20px;
 }
+.addCat {
+    background: #444;
+    padding-left: 31px;
+}
 .taskAdd {
     background: #444;
     padding-left: 31px;
@@ -163,7 +167,7 @@ button {
 }
 .taskDelete {
     background: #e74c3c;
-    padding-left: 30px;
+    padding-left: 32px;
 }
 .taskDelete:hover {
     background: #c0392b;
