@@ -4,3 +4,5 @@ Python == 3.6
 
 In order to run the application you must CD into the todoapp and run: python manage.py runserver.
 
+
+
