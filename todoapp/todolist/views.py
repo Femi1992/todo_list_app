@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import TodoList, Category
 from django.views.generic import CreateView
+from django.contrib.auth.decorators import login_required
+from .forms import CategoryForm
 # Create your views here.
 
 def index(request):
@@ -21,3 +23,12 @@ def index(request):
                 todo = TodoList.objects.get(id=int(todo_id)) #gettingtodo id
                 todo.delete() #deletingtodo
     return render(request, "index.html", {"todos": todos, "categories":categories})
+
+class CreateCategoryView(CreateView):
+    login_url = '/'
+    redirect_field_name = 'todolist/index.html'
+
+    form_class = CategoryForm
+
+    model = Category
+
