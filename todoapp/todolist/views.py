@@ -25,7 +25,6 @@ def index(request):
     return render(request, "index.html", {"todos": todos, "categories":categories})
 
 class CreateCategoryView(CreateView):
-    login_url = '/'
     redirect_field_name = 'todolist/index.html'
 
     form_class = CategoryForm
